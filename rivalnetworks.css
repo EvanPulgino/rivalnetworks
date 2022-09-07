@@ -50,7 +50,7 @@
  */
 #rn_timeslots {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -58,8 +58,30 @@
 .rn-timeslot-panel {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.rn-show-panel {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+
+.rn-stars-panel {
+    --gap: -11rem;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: calc(-1 * var(--gap));
+    z-index: 2;
+    left: 120px;
+    top: 40px;
+}
+
+.rn-stars-panel > * {
+    margin-left: var(--gap);
 }
 
 /**
@@ -73,6 +95,10 @@
     border-radius: 5%;
     box-shadow: 1px 1px 1px 0 #000000a0;
     background-image: url('img/rn_shows.png');
+}
+div.rn-show:hover {
+    transform: scale(1.05);
+    z-index: 100;
 }
 
 .rn-show-action-0 { background-position: 40% 33.33%; }
@@ -121,6 +147,24 @@
 .rn-show-sports-1 { background-position: 80% 83.33%; }
 .rn-show-sports-2 { background-position: 0 100%; }
 .rn-show-sports-3 { background-position: 20% 100%; }
+
+/**
+ * TIMESLOTS
+ */
+.rn-star {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 98.5px;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px 0 #000000a0;
+    background-image: url('img/rn_stars.png');
+}
+
+div.rn-star:hover {
+    transform: scale(1.05);
+    z-index: 100;
+}
 
 /**
  * TIMESLOTS
