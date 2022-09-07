@@ -31,5 +31,4 @@ CREATE TABLE IF NOT EXISTS `card` (
 ALTER TABLE `player` ADD `eight_pm_ratings` INT UNSIGNED NOT NULL DEFAULT '0';
 ALTER TABLE `player` ADD `nine_pm_ratings` INT UNSIGNED NOT NULL DEFAULT '0';
 ALTER TABLE `player` ADD `ten_pm_ratings` INT UNSIGNED NOT NULL DEFAULT '0';
-ALTER TABLE `player` ADD `viewers` INT UNSIGNED NOT NULL DEFAULT '0';
-
+ALTER TABLE `player` ADD `active_turn_viewers` INT UNSIGNED NOT NULL DEFAULT '0';
