@@ -18,7 +18,8 @@
 
 
 require_once( APP_GAMEMODULE_PATH.'module/table/table.game.php' );
-
+require_once("modules/php/constants.inc.php");
+require_once("modules/php/RivalNetworksPlayerManager.class.php");
 
 class RivalNetworks extends Table
 {
@@ -34,6 +35,8 @@ class RivalNetworks extends Table
         
         self::initGameStateLabels( array( 
         ) );
+
+        $this->playerManager = new RivalNetworksPlayerManager($this);
 	}
 	
     protected function getGameName( )
@@ -50,29 +53,9 @@ class RivalNetworks extends Table
         the game is ready to be played.
     */
     protected function setupNewGame( $players, $options = array() )
-    {    
-        // Set the colors of the players with HTML color code
-        // The default below is red/green/blue/orange/brown
-        // The number of colors defined here must correspond to the maximum number of players allowed for the gams
-        $gameinfos = self::getGameinfos();
-        $default_colors = $gameinfos['player_colors'];
- 
-        // Create players
-        // Note: if you added some extra field on "player" table in the database (dbmodel.sql), you can initialize it there.
-        $sql = "INSERT INTO player (player_id, player_color, player_canal, player_name, player_avatar) VALUES ";
-        $values = array();
-        foreach( $players as $player_id => $player )
-        {
-            $color = array_shift( $default_colors );
-            $values[] = "('".$player_id."','$color','".$player['player_canal']."','".addslashes( $player['player_name'] )."','".addslashes( $player['player_avatar'] )."')";
-        }
-        $sql .= implode( $values, ',' );
-        self::DbQuery( $sql );
-        self::reattributeColorsBasedOnPreferences( $players, $gameinfos['player_colors'] );
-        self::reloadPlayersBasicInfos();
+    {
+        $this->playerManager->setupNewGame($players);
         
-        /************ Start the game initialization *****/
-
         // Init global values
         
         // Init game statistics
@@ -96,12 +79,15 @@ class RivalNetworks extends Table
         _ when a player refreshes the game page (F5)
     */
     protected function getAllDatas()
-    {
-        $result = array();
-    
+    {    
         $current_player_id = self::getCurrentPlayerId();    // !! We must only return informations visible by this player !!
   
-        return $result;
+        $data = [
+            'constants' => get_defined_constants(true)['user'],
+            'playerInfo' => $this->playerManager->getUiData(),
+        ];
+
+        return $data;
     }
 
     /*

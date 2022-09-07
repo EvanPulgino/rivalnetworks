@@ -15,16 +15,19 @@
  *
  */
 
+var isDebug = window.location.host == 'studio.boardgamearena.com';
+var debug = isDebug ? console.info.bind(window.console) : function(){};
 define([
-    "dojo","dojo/_base/declare",
+    "dojo",
+    "dojo/_base/declare",
     "ebg/core/gamegui",
     "ebg/counter",
-    "ebg/stock"
+    g_gamethemeurl + "modules/js/RivalNetworksUtilities.js",
 ],
 function (dojo, declare) {
     return declare("bgagame.rivalnetworks", ebg.core.gamegui, {
         constructor: function(){
-            console.log('rivalnetworks constructor');
+            this.utilities = new rn.utilities(this);
         },
         
         /*
@@ -42,12 +45,11 @@ function (dojo, declare) {
         
         setup: function( gamedatas )
         {
-            console.log( "Starting game setup" );
+            debug('Gamedatas', gamedatas);
 
+            this.utilities.defineGlobalConstants(gamedatas.constants);
+            
             this.setupNotifications();
-
-
-            console.log( "Ending game setup" );
         },
        
 
