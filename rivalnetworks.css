@@ -45,3 +45,97 @@
 
 /* Note: you must not use any @import directive */
 
+/**
+ * LAYOUT
+ */
+#rn_timeslots {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rn-timeslot-panel {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/**
+ * SHOWS
+ */
+.rn-show {
+    display: inline-block;
+    position: relative;
+    width: 210px;
+    height: 150px;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px 0 #000000a0;
+    background-image: url('img/rn_shows.png');
+}
+
+.rn-show-action-0 { background-position: 40% 33.33%; }
+.rn-show-action-1 { background-position: 0 50%; }
+.rn-show-action-2 { background-position: 20% 50%; }
+.rn-show-action-3 { background-position: 40% 50%; }
+
+.rn-show-documentaries-0 { background-position: 0 0; }
+.rn-show-documentaries-1 { background-position: 20% 0; }
+.rn-show-documentaries-2 { background-position: 0 16.67%; }
+.rn-show-documentaries-3 {background-position: 20% 16.67%; }
+
+.rn-show-drama-0 { background-position: 80% 0; }
+.rn-show-drama-1 { background-position: 80% 16.67%; }
+.rn-show-drama-2 { background-position: 80% 33.33%; }
+.rn-show-drama-3 { background-position: 80% 50%; }
+
+.rn-show-gameshows-0 { background-position: 40% 0; }
+.rn-show-gameshows-1 { background-position: 40% 16.67%; }
+.rn-show-gameshows-2 { background-position: 0 33.33%; }
+.rn-show-gameshows-3 { background-position: 20% 33.33%; }
+
+.rn-show-reality-0 { background-position: 80% 66.67%; }
+.rn-show-reality-1 { background-position: 0 83.33%; }
+.rn-show-reality-2 { background-position: 20% 83.33%; }
+.rn-show-reality-3 { background-position: 40% 83.33%; }
+
+.rn-show-scifi-0 { background-position: 0 66.67%; }
+.rn-show-scifi-1 { background-position: 20% 66.67%; }
+.rn-show-scifi-2 { background-position: 40% 66.67%; }
+.rn-show-scifi-3 { background-position: 60% 66.67%; }
+
+.rn-show-season-0 { background-position: 60% 100%; }
+.rn-show-season-1 { background-position: 80% 100%; }
+.rn-show-season-2 { background-position: 100% 0; }
+.rn-show-season-3 { background-position: 100% 16.67%; }
+.rn-show-season-4 { background-position: 100% 33.33%; }
+.rn-show-season-finale { background-position: 40% 100%; }
+
+.rn-show-sitcom-0 { background-position: 60% 0; }
+.rn-show-sitcom-1 { background-position: 60% 16.67%; }
+.rn-show-sitcom-2 { background-position: 60% 33.33%; }
+.rn-show-sitcom-3 { background-position: 60% 50%; }
+
+.rn-show-sports-0 { background-position: 60% 83.33%; }
+.rn-show-sports-1 { background-position: 80% 83.33%; }
+.rn-show-sports-2 { background-position: 0 100%; }
+.rn-show-sports-3 { background-position: 20% 100%; }
+
+/**
+ * TIMESLOTS
+ */
+.rn-timeslot {
+    display: inline-block;
+    position: relative;
+    width: 325.5px;
+    height: 237px;
+    box-shadow: 1px 1px 1px 0 #000000a0;
+    background-image: url('img/rn_timeslots.png');
+}
+
+#rn_timeslot_green_room { background-position: 0 0; }
+#rn_timeslot_8pm { background-position: 100% 0; }
+#rn_timeslot_9pm { background-position: 100% 50%; }
+#rn_timeslot_10pm { background-position: 100% 100%; }
+#rn_timeslot_reruns { background-position: 50% 100%; }

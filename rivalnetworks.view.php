@@ -24,28 +24,48 @@
  *
  */
   
-  require_once( APP_BASE_PATH."view/common/game.view.php" );
-  
-  class view_rivalnetworks_rivalnetworks extends game_view
-  {
-    function getGameName() {
-        return "rivalnetworks";
-    }    
-  	function build_page( $viewArgs )
-  	{		
-        // Get template name
-        $template = self::getGameName() . "_" . self::getGameName();
+require_once( APP_BASE_PATH."view/common/game.view.php" );
 
-  	    // Get players & players number
-        $players = $this->game->loadPlayersBasicInfos();
-        $players_nbr = count( $players );
-
-        /*********** Place your code below:  ************/
-
-        
-
-        /*********** Do not change anything below this line  ************/
-  	}
+class view_rivalnetworks_rivalnetworks extends game_view
+{
+  function getGameName() {
+    return "rivalnetworks";
   }
+
+  function build_page( $viewArgs )
+  {		
+    // Get template name
+    $template = self::getGameName() . "_" . self::getGameName();
+
+    // Get players
+    $players = $this->game->loadPlayersBasicInfos();
+
+    // Inflate timeslots
+    $this->page->begin_block($template, 'playershow');
+    $this->page->begin_block($template, 'timeslot');
+    for($time = 8; $time <= 10; $time++) {
+      $this->page->reset_subblocks('playershow');
+      foreach($players as $player) {
+        $this->page->insert_block(
+          'playershow',
+          array(
+            'PLAYER_ID' => $player['player_id'],
+            'ORDER' => $player['player_no'] == 1 ? 1 : 3
+          )
+        );
+      }
+      $this->page->insert_block(
+        'timeslot',
+        array(
+          'TIME' => $time
+        )
+      );
+    }
+
+      
+
+    /*********** Do not change anything below this line  ************/
+  }
+}
   
 
