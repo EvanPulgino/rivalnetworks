@@ -20,6 +20,7 @@
 require_once( APP_GAMEMODULE_PATH.'module/table/table.game.php' );
 require_once("modules/php/constants.inc.php");
 require_once("modules/php/RivalNetworksPlayerManager.class.php");
+require_once("modules/php/RivalNetworksShowManager.class.php");
 
 class RivalNetworks extends Table
 {
@@ -37,6 +38,7 @@ class RivalNetworks extends Table
         ) );
 
         $this->playerManager = new RivalNetworksPlayerManager($this);
+        $this->showManager = new RivalNetworksShowManager($this);
 	}
 	
     protected function getGameName( )
@@ -55,6 +57,7 @@ class RivalNetworks extends Table
     protected function setupNewGame( $players, $options = array() )
     {
         $this->playerManager->setupNewGame($players);
+        $this->showManager->setupNewGame($this->playerManager->getPlayers());
         
         // Init global values
         
@@ -81,10 +84,18 @@ class RivalNetworks extends Table
     protected function getAllDatas()
     {    
         $current_player_id = self::getCurrentPlayerId();    // !! We must only return informations visible by this player !!
-  
+
+        $currentShows = [];
+        for ($timeSlot = EIGHT_PM; $timeSlot <= TEN_PM; $timeSlot++) {
+            $currentShows[$timeSlot] = $this->showManager->getUiData($timeSlot);
+        }
+
         $data = [
             'constants' => get_defined_constants(true)['user'],
+            'currentShows' => $currentShows,
             'playerInfo' => $this->playerManager->getUiData(),
+            'showDeck' => $this->showManager->getUiData(DECK),
+            'showDisplay' => $this->showManager->getUiData(DISPLAY),
         ];
 
         return $data;

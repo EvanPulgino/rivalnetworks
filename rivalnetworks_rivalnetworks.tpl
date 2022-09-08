@@ -10,22 +10,27 @@
 -------
 -->
 
-<div id="rn_timeslots">
-    <!-- BEGIN timeslot -->
-    <div id="rn_timeslot_panel_{TIME}pm" class="rn-timeslot-panel">
-        <div id="rn_timeslot_{TIME}pm" class="rn-timeslot" style="order:2;"></div>
-        <!-- BEGIN playershow -->
-        <div id="rn_{TIME}pm_show_{PLAYER_ID}" class="rn-show-panel" style="order:{ORDER};">
-            <div id="rn_{TIME}pm_stars_{PLAYER_ID}" class="rn-stars-panel"></div>
+<div id="rn_layout">
+    <div id="rn_timeslots">
+        <!-- BEGIN timeslot -->
+        <div id="rn_timeslot_panel_{TIME}pm" class="rn-timeslot-panel">
+            <div id="rn_timeslot_{TIME}pm" class="rn-timeslot" style="order:2;"></div>
+            <!-- BEGIN playershow -->
+            <div id="rn_{TIME}pm_show_{PLAYER_ID}" class="rn-show-panel" style="order:{ORDER};">
+                <div id="rn_{TIME}pm_stars_{PLAYER_ID}" class="rn-stars-panel"></div>
+            </div>
+            <!-- END playershow -->
         </div>
-        <!-- END playershow -->
+        <!-- END timeslot -->
     </div>
-    <!-- END timeslot -->
+    <div id="rn_showdisplay" class="whiteblock">
+        <div id="rn_showdeck"></div>
+    </div>
 </div>
 
 <script type="text/javascript">
 
-var jstpl_show = '<div id="rn_show_${show_id}" class="rn-show ${show_class}" genre="${show_genre}" preftimeslot="${show_preftimeslot}" correctrating="${show_correctrating}" wrongrating="${show_wrongrating}"></div>'
+var jstpl_show = '<div id="rn_show_${show_id}" class="rn-show ${show_class}" season="${show_season}" genre="${show_genre}" preftimeslot="${show_preftimeslot}" correctrating="${show_correctrating}" wrongrating="${show_wrongrating}"></div>'
 var jstpl_star = '<div id="rn_star_${star_id}" class="rn-star ${star_class}" genres="${star_genres}" rating="${star_rating}"></div>'
 
 </script>  

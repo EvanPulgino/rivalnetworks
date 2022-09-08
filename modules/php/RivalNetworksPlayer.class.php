@@ -14,8 +14,8 @@
  * Player object
  */
 
- class RivalNetworksPlayer extends APP_GameClass
- {
+class RivalNetworksPlayer extends APP_GameClass
+{
     private $game;
     private $id;
     private $naturalOrder;
@@ -77,4 +77,4 @@
             'activeTurnViewers' => $this->activeTurnViewers,
         ];
     }
- }
+}

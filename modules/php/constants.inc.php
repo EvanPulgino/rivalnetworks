@@ -15,7 +15,48 @@
  */
 
 /**
+ * Card Database Columns
+ */
+define('ID', 'id');
+define('LOCATION', 'location');
+define('LOCATION_ARG', 'location_arg');
+define('TYPE', 'type');
+define('TYPE_ARG', 'type_arg');
+
+/**
+ * Card Locations
+ */
+define('DECK', 'deck');
+define('DISPLAY', 'display');
+
+/**
+ * Genres
+ */
+define('ACTION', 'action');
+define('DRAMA', 'drama');
+define('REALITY', 'reality');
+define('SCIFI', 'scifi');
+define('SITCOM', 'sitcom');
+define('SPORTS', 'sports');
+/**
+ * Season Finale
+ */
+define('SEASON_FINALE', 'seasonFinale');
+/**
+ * Expansion Genres
+ */
+define('DOCUMENTARIES', 'documentaries');
+define('GAME_SHOWS', 'gameshows');
+
+/**
  * JSTPL template names
  */
 define('SHOW_TEMPLATE', 'jstpl_show');
 define('STAR_TEMPLATE', 'jstpl_star');
+
+/**
+ * Time Slots
+ */
+define('EIGHT_PM', 8);
+define('NINE_PM', 9);
+define('TEN_PM', 10);
