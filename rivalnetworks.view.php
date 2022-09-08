@@ -40,6 +40,19 @@ class view_rivalnetworks_rivalnetworks extends game_view
     // Get players
     $players = $this->game->loadPlayersBasicInfos();
 
+    // Inflate playerareas
+    $this->page->begin_block($template, 'playerarea');
+    foreach($players as $player) {
+      $this->page->insert_block(
+        'playerarea',
+        array(
+          'PLAYER_ID' => $player['player_id'],
+          'COLOR' => $player['player_no'] == 1 ? 'blue' : 'yellow',
+          'ORDER' => $player['player_no'] == 1 ? 1 : 3,
+        )
+      );
+    }
+
     // Inflate timeslots
     $this->page->begin_block($template, 'playershow');
     $this->page->begin_block($template, 'timeslot');

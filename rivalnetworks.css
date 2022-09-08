@@ -48,6 +48,10 @@
 /**
  * GENERIC
  */
+html {
+    background-image: url('img/rn_table.jpg');
+}
+
 .rn-in-deck {
     position: absolute;
 }
@@ -58,9 +62,68 @@
 #rn_layout {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+}
+
+.rn-playerarea {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 95%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #000000a0;
+}
+
+.rn-playerarea-blue {
+    background-image: linear-gradient(to right, rgba(2, 158, 218, 1), rgba(2, 158, 218, 0));
+}
+
+.rn-playerarea-yellow {
+    background-image: linear-gradient(to right, rgba(255, 165, 0, 1), rgba(255, 165, 0, 0));
+}
+
+.rn-active-turn-viewers {
+    --gap: -4.5rem;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: calc(-1 * var(--gap));
+    padding-left: 10px;
+}
+
+.rn-active-turn-viewers > * {
+    margin-left: var(--gap);
+}
+
+.rn-greenroom {
+    --gap: -7.5rem;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: calc(-1 * var(--gap));
+}
+
+.rn-greenroom > * {
+    margin-left: var(--gap);
+}
+
+.rn-reruns {
+    --gap: -11rem;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: calc(-1 * var(--gap));
+}
+
+.rn-reruns > * {
+    margin-left: var(--gap);
 }
 
 #rn_timeslots {
@@ -68,6 +131,8 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: flex-start;
+    width: 100%;
+    order: 2;
 }
 
 .rn-timeslot-panel {
@@ -104,8 +169,13 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    background-image: linear-gradient(to right, rgba(76,76,75,1), rgba(76,76,75,0));
     gap: 10px;
     margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    order: 4;
 }
 
 #rn_showdeck {
@@ -122,6 +192,20 @@
     transform: unset !important;
     z-index: unset !important;
 }
+
+/**
+ * HOUSES
+ */
+.rn-house {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 84px;
+    background-image: url('img/rn_houses.png');
+}
+
+.rn-house-blue { background-position: 0 0; margin-left: -30px; }
+.rn-house-yellow { background-position: 100% 0; margin-right: -30px; }
 
 /**
  * SHOWS
@@ -273,3 +357,17 @@ div.rn-star:hover {
 #rn_timeslot_9pm { background-position: 100% 50%; }
 #rn_timeslot_10pm { background-position: 100% 100%; }
 #rn_timeslot_reruns { background-position: 50% 100%; }
+
+/**
+ * VIEWER CHIP
+ */
+.rn-viewerchip {
+   display: inline-block;
+   position: relative;
+   width: 65px;
+   height: 65px;
+   border: 2px dashed;
+   border-radius: 50%;
+   box-shadow: 1px 1px 1px 0 #000000a0;
+   background-image: url('img/rn_viewerchip.png');
+}

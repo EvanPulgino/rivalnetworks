@@ -53,6 +53,7 @@ define('GAME_SHOWS', 'gameshows');
  */
 define('SHOW_TEMPLATE', 'jstpl_show');
 define('STAR_TEMPLATE', 'jstpl_star');
+define('VIEWER_CHIP_TEMPLATE', 'jstpl_viewer_chip');
 
 /**
  * Time Slots
