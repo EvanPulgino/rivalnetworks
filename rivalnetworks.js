@@ -23,12 +23,14 @@ define([
     "ebg/core/gamegui",
     "ebg/counter",
     g_gamethemeurl + "modules/js/RivalNetworksShowManager.js",
+    g_gamethemeurl + "modules/js/RivalNetworksStarManager.js",
     g_gamethemeurl + "modules/js/RivalNetworksUtilities.js",
 ],
 function (dojo, declare) {
     return declare("bgagame.rivalnetworks", ebg.core.gamegui, {
         constructor: function () {
             this.showManager = new rn.showManager(this);
+            this.starManager = new rn.starManager(this);
             this.utilities = new rn.utilities(this);
         },
         
@@ -51,6 +53,7 @@ function (dojo, declare) {
 
             this.utilities.defineGlobalConstants(gamedatas.constants);
             this.showManager.setup(gamedatas);
+            this.starManager.setup(gamedatas);
             
             this.setupNotifications();
         },

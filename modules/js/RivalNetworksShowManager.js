@@ -34,13 +34,13 @@ define([
             const orderedShowDeck = this.game.utilities.sortObjectArrayByProperty(gamedatas.showDeck, 'locationPosition');
             for (let showDeckKey in orderedShowDeck) {
                 const show = orderedShowDeck[showDeckKey];
-                this.createShowCard(show, 'rn_showdeck', false);
+                this.createShowCard(show, 'rn_show_deck', false);
             }
 
             // Create show display
             for (let showDisplayKey in gamedatas.showDisplay) {
                 const show = gamedatas.showDisplay[showDisplayKey];
-                this.createShowCard(show, 'rn_showdisplay');
+                this.createShowCard(show, 'rn_show_display');
             }
 
             // Create current show cards

@@ -28,6 +28,8 @@ define('TYPE_ARG', 'type_arg');
  */
 define('DECK', 'deck');
 define('DISPLAY', 'display');
+define('GREENROOM', 'greenroom');
+define('MEGASTARS', 'megastars');
 
 /**
  * Genres
@@ -38,6 +40,7 @@ define('REALITY', 'reality');
 define('SCIFI', 'scifi');
 define('SITCOM', 'sitcom');
 define('SPORTS', 'sports');
+define('WILD', 'wild');
 /**
  * Season Finale
  */
@@ -61,3 +64,10 @@ define('VIEWER_CHIP_TEMPLATE', 'jstpl_viewer_chip');
 define('EIGHT_PM', 8);
 define('NINE_PM', 9);
 define('TEN_PM', 10);
+
+/**
+ * Star Ttypes
+ */
+define('MEGA', 'mega');
+define('STARTER', 'starter');
+define('STANDARD', 'standard');

@@ -21,7 +21,7 @@ require_once( APP_GAMEMODULE_PATH.'module/table/table.game.php' );
 require_once("modules/php/constants.inc.php");
 require_once("modules/php/RivalNetworksPlayerManager.class.php");
 require_once("modules/php/RivalNetworksShowManager.class.php");
-
+require_once("modules/php/RivalNetworksStarManager.class.php");
 class RivalNetworks extends Table
 {
 	function __construct( )
@@ -39,6 +39,7 @@ class RivalNetworks extends Table
 
         $this->playerManager = new RivalNetworksPlayerManager($this);
         $this->showManager = new RivalNetworksShowManager($this);
+        $this->starManager = new RivalNetworksStarManager($this);
 	}
 	
     protected function getGameName( )
@@ -58,6 +59,7 @@ class RivalNetworks extends Table
     {
         $this->playerManager->setupNewGame($players);
         $this->showManager->setupNewGame($this->playerManager->getPlayers());
+        $this->starManager->setupNewGame($this->playerManager->getPlayers());
         
         // Init global values
         
@@ -93,9 +95,13 @@ class RivalNetworks extends Table
         $data = [
             'constants' => get_defined_constants(true)['user'],
             'currentShows' => $currentShows,
+            'greenroomStars' => $this->starManager->getUiData(GREENROOM),
+            'megastarDeck' => $this->starManager->getUiData(MEGASTARS),
             'playerInfo' => $this->playerManager->getUiData(),
             'showDeck' => $this->showManager->getUiData(DECK),
             'showDisplay' => $this->showManager->getUiData(DISPLAY),
+            'starDeck' => $this->starManager->getUiData(DECK),
+            'starDisplay' => $this->starManager->getUiData(DISPLAY),
         ];
 
         return $data;

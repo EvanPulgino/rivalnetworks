@@ -114,7 +114,7 @@ require_once('shows/SportsShow.class.php');
     }
 
     /**
-     * Get the UI data of all cards in a specified location
+     * Get the UI data of all show cards in a specified location
      * @param mixed $location Location value in db
      * @return array<mixed> Array of UI data for Shows
      */

@@ -14,10 +14,10 @@
     <!-- BEGIN playerarea -->
     <div id="rn_playerarea_{PLAYER_ID}" class="rn-playerarea rn-playerarea-{COLOR}" style="order:{ORDER};">
         <div id="rn_house_{PLAYER_ID}" class="rn-house rn-house-{COLOR}"></div>
-        <div id="rn_active_turn_viewers_{PLAYER_ID}" class="rn-active-turn-viewers"></div>
-        <div id="rn_greenroom_stars_{PLAYER_ID}" class="rn-greenroom"></div>
-        <div id="rn_greenroom_ads_{PLAYER_ID}" class="rn-greenroom"></div>
-        <div id="rn_reruns_{PLAYER_ID}" class="rn-reruns"></div>
+        <div id="rn_active_turn_viewers_{PLAYER_ID}" class="rn-active-turn-viewers rn-hidden"></div>
+        <div id="rn_greenroom_stars_{PLAYER_ID}" class="rn-greenroom rn-hidden"></div>
+        <div id="rn_greenroom_ads_{PLAYER_ID}" class="rn-greenroom rn-hidden"></div>
+        <div id="rn_reruns_{PLAYER_ID}" class="rn-reruns rn-hidden"></div>
     </div>
     <!-- END playerarea -->
     <div id="rn_timeslots">
@@ -32,8 +32,19 @@
         </div>
         <!-- END timeslot -->
     </div>
-    <div id="rn_showdisplay">
-        <div id="rn_showdeck"></div>
+    <div id="rn_card_display">
+        <div id="rn_show_display">
+            <div id="rn_show_deck"></div>
+        </div>
+        <div id="rn_star_ad_display">
+            <div id="rn_star_display">
+                <div id="rn_star_deck"></div>
+            </div>
+            <div id="rn_ad_display">
+                <div id="rn_ad_deck"></div>
+            </div>
+        </div>
+        <div id="rn_megastar_deck"></div>
     </div>
 </div>
 
