@@ -54,6 +54,7 @@ define('GAME_SHOWS', 'gameshows');
 /**
  * JSTPL template names
  */
+define('RATINGS_DISC_TEMPLATE', 'jstpl_ratings_disc');
 define('SHOW_TEMPLATE', 'jstpl_show');
 define('STAR_TEMPLATE', 'jstpl_star');
 define('VIEWER_CHIP_TEMPLATE', 'jstpl_viewer_chip');

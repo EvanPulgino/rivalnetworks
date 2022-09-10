@@ -24,9 +24,12 @@
         <!-- BEGIN timeslot -->
         <div id="rn_timeslot_panel_{TIME}pm" class="rn-timeslot-panel">
             <div id="rn_timeslot_{TIME}pm" class="rn-timeslot" style="order:2;">
+                <!-- BEGIN ratingsspace -->
+                <div id="rn_ratings_{TIME}pm_space_{SPACE_NUM}" class="rn-ratings-space rn-ratings-space-{SPACE_NUM}"></div>
+                <!-- END ratingsspace -->
                 <!-- BEGIN playerrating -->
                 <div id="rn_timeslot_{TIME}pm_ratings_{PLAYER_ID}" class="rn-timeslot-rating rn-timeslot-rating-{COLOR}">
-                    <span id="rn-timeslot-rating-counter-{PLAYER_ID}" class="rn-show-rating rn-show-rating-{COLOR}">0</span>
+                    <span id="rn_timeslot_{TIME}pm_ratings_counter_{PLAYER_ID}" class="rn-show-rating rn-show-rating-{COLOR}">0</span>
                 </div>
                 <!-- END playerrating -->
             </div>
@@ -59,6 +62,7 @@
 
 <script type="text/javascript">
 
+var jstpl_ratings_disc = '<div id="rn_ratings_disc_${time}pm_${player_id}" class="rn-ratings-disc rn-ratings-disc-${color}"><span id="rn_ratings_disc_${time}pm_${player_id}" class="rn-ratings-disc-20 ${visibility}">+20</span></div>';
 var jstpl_show = '<div id="rn_show_${show_id}" class="rn-show ${show_class}" season="${show_season}" genre="${show_genre}" preftimeslot="${show_preftimeslot}" correctrating="${show_correctrating}" wrongrating="${show_wrongrating}"></div>';
 var jstpl_star = '<div id="rn_star_${star_id}" class="rn-star ${star_class}" genres="${star_genres}" rating="${star_rating}"></div>';
 var jstpl_viewer_chip = '<div id="rn_viewer_chip_${num} class="rn-viewer-chip"></div>'

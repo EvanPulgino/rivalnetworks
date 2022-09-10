@@ -147,35 +147,72 @@ html {
     gap: 5px;
 }
 
+.rn-ratings-space {
+    --gap: -1.35rem;
+    position: absolute;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 1.25rem;
+    height: 2.5rem;
+    margin-left: calc(-1 * var(--gap));
+}
+
+.rn-ratings-space > * {
+    margin-left: var(--gap);
+}
+
+.rn-ratings-space-0 { top: 2.5rem; }
+.rn-ratings-space-1 { top: 2.5rem; left: 2.65rem; }
+.rn-ratings-space-2 { top: 2.5rem; left: 5.15rem; }
+.rn-ratings-space-3 { top: 2.5rem; left: 7.7rem; }
+.rn-ratings-space-4 { top: 2.5rem; left: 10.25rem; }
+.rn-ratings-space-5 { top: 2.5rem; left: 12.8rem; }
+.rn-ratings-space-6 { top: 2.5rem; left: 15.3rem; }
+.rn-ratings-space-7 { top: 2.5rem; left: 17.85rem; }
+.rn-ratings-space-8 { height: 2.35rem !important; top: 5rem; left: 17.85rem; }
+.rn-ratings-space-9 { height: 2.35rem !important; top: 7.4rem; left: 17.85rem; }
+.rn-ratings-space-10 { height: 2.4rem !important; top: 9.8rem; left: 17.85rem; }
+.rn-ratings-space-11 { height: 2.4rem !important; top: 9.8rem; left: 15.3rem; }
+.rn-ratings-space-12 { height: 2.4rem !important; top: 9.8rem; left: 12.8rem; }
+.rn-ratings-space-13 { height: 2.4rem !important; top: 9.8rem; left: 10.25rem; }
+.rn-ratings-space-14 { height: 2.4rem !important; top: 9.8rem; left: 7.7rem; }
+.rn-ratings-space-15 { height: 2.4rem !important; top: 9.8rem; left: 5.15rem; }
+.rn-ratings-space-16 { height: 2.4rem !important; top: 9.8rem; left: 2.65rem; }
+.rn-ratings-space-17 { height: 2.4rem !important; top: 9.8rem; }
+.rn-ratings-space-18 { height: 2.35rem !important; top: 7.4rem; }
+.rn-ratings-space-19 { height: 2.35rem !important; top: 5rem; }
+
 .rn-timeslot-rating {
-    position: relative;
+    position: absolute;
     display: grid;
     width: 5.8rem;
     height: 3.95rem;
+    top: 5.4rem;
     place-content: center;
 }
 
 .rn-timeslot-rating-blue {
     left: 4rem;
-    top: 5.4rem;
 }
 
 .rn-timeslot-rating-yellow {
     left: 10.6rem;
-    top: 1.4rem;
 }
 
 .rn-show-rating {
     font-size: 4rem;
     font-weight: 800;
-    text-shadow: 0.1rem 0.1rem 0.1rem cornsilk;
 }
 .rn-show-rating-blue {
     color: #029eda;
+    text-shadow: 0.1rem 0.1rem 0.1rem white;
 }
 
 .rn-show-rating-yellow {
     color: #ffa500;
+    text-shadow: 0.1rem 0.1rem 0.1rem black;
 }
 
 .rn-show-panel {
@@ -369,6 +406,32 @@ html {
 
 .rn-house-blue { background-position: 0 0; margin-left: -30px; }
 .rn-house-yellow { background-position: 100% 0; margin-right: -30px; }
+
+/**
+ * RATING DISCS
+ */
+.rn-ratings-disc {
+    display: grid;
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    box-shadow: .05rem .05rem .05rem 0 #000000a0;
+    place-content: center;
+}
+
+div.rn-ratings-disc:hover {
+    transform: scale(1.15);
+    z-index: 100;
+}
+
+.rn-ratings-disc-blue { background-color: #029eda;  color: white;}
+.rn-ratings-disc-yellow { background-color: #ffa500; color: black;}
+
+.rn-ratings-disc-20 {
+    font-size: .75rem;
+    font-weight: 800;
+}
 
 /**
  * SHOWS
