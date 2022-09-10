@@ -133,7 +133,7 @@ html {
 #rn_timeslots {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
     order: 2;
@@ -145,6 +145,37 @@ html {
     justify-content: center;
     align-items: flex-end;
     gap: 5px;
+}
+
+.rn-timeslot-rating {
+    position: relative;
+    display: grid;
+    width: 5.8rem;
+    height: 3.95rem;
+    place-content: center;
+}
+
+.rn-timeslot-rating-blue {
+    left: 4rem;
+    top: 5.4rem;
+}
+
+.rn-timeslot-rating-yellow {
+    left: 10.6rem;
+    top: 1.4rem;
+}
+
+.rn-show-rating {
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 0.1rem 0.1rem 0.1rem cornsilk;
+}
+.rn-show-rating-blue {
+    color: #029eda;
+}
+
+.rn-show-rating-yellow {
+    color: #ffa500;
 }
 
 .rn-show-panel {
@@ -289,6 +320,37 @@ html {
 }
 
 #rn_megastar_deck > * {
+    margin-left: var(--gap);
+    transform: unset !important;
+    z-index: unset !important;
+}
+
+#rn_network_display {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(213,123,163,1), rgba(213,123,163,0));
+    gap: 10px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #000000a0;
+    order: 2;
+}
+
+#rn_network_deck {
+    --gap: -9.5rem;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: calc(-1 * var(--gap));
+    order: 0;
+}
+
+#rn_network_deck > * {
     margin-left: var(--gap);
     transform: unset !important;
     z-index: unset !important;

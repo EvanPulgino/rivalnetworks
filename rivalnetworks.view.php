@@ -54,11 +54,22 @@ class view_rivalnetworks_rivalnetworks extends game_view
     }
 
     // Inflate timeslots
+    $this->page->begin_block($template, 'playerrating');
     $this->page->begin_block($template, 'playershow');
     $this->page->begin_block($template, 'timeslot');
     for($time = EIGHT_PM; $time <= TEN_PM; $time++) {
+      $this->page->reset_subblocks('playerrating');
       $this->page->reset_subblocks('playershow');
       foreach($players as $player) {
+        $this->page->insert_block(
+          'playerrating',
+          array(
+            'PLAYER_ID' => $player['player_id'],
+            'COLOR' => $player['player_no'] == 1 ? 'blue' : 'yellow',
+            'TIME' => $time,
+          )
+          );
+
         $this->page->insert_block(
           'playershow',
           array(

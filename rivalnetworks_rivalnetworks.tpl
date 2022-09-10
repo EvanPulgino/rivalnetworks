@@ -23,7 +23,13 @@
     <div id="rn_timeslots">
         <!-- BEGIN timeslot -->
         <div id="rn_timeslot_panel_{TIME}pm" class="rn-timeslot-panel">
-            <div id="rn_timeslot_{TIME}pm" class="rn-timeslot" style="order:2;"></div>
+            <div id="rn_timeslot_{TIME}pm" class="rn-timeslot" style="order:2;">
+                <!-- BEGIN playerrating -->
+                <div id="rn_timeslot_{TIME}pm_ratings_{PLAYER_ID}" class="rn-timeslot-rating rn-timeslot-rating-{COLOR}">
+                    <span id="rn-timeslot-rating-counter-{PLAYER_ID}" class="rn-show-rating rn-show-rating-{COLOR}">0</span>
+                </div>
+                <!-- END playerrating -->
+            </div>
             <!-- BEGIN playershow -->
             <div id="rn_{TIME}pm_show_{PLAYER_ID}" class="rn-show-panel" style="order:{ORDER};">
                 <div id="rn_{TIME}pm_stars_{PLAYER_ID}" class="rn-stars-panel"></div>
@@ -45,6 +51,9 @@
             </div>
         </div>
         <div id="rn_megastar_deck"></div>
+        <div id="rn_network_display">
+            <div id="rn_network_deck"></div>
+        </div>
     </div>
 </div>
 
