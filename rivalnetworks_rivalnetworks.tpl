@@ -42,21 +42,59 @@
         <!-- END timeslot -->
     </div>
     <div id="rn_card_display">
-        <div id="rn_show_display">
-            <div id="rn_show_deck"></div>
+        <div id="rn_show_network_display">
+            <div id="rn_show_row">
+                <div id="rn_show_display">
+                    <div id="rn_show_text_div">
+                        <span id="rn_show_text">shows</span>
+                    </div>
+                    <div id="rn_show_deck"></div>
+                </div>
+                <div id="rn_show_discard_display">
+                    <div id="rn_show_discard"></div>
+                </div>
+            </div>
+            <div id="rn_network_row">
+                <div id="rn_network_display">
+                    <div id="rn_star_text_div">
+                        <span id="rn_star_text">network</span>
+                    </div>
+                    <div id="rn_network_deck"></div>
+                </div>
+                <div id="rn_network_discard_display">
+                    <div id="rn_network_discard"></div>
+                </div>
+            </div>
         </div>
+        
         <div id="rn_star_ad_display">
-            <div id="rn_star_display">
-                <div id="rn_star_deck"></div>
+            <div id="rn_star_row">
+                <div id="rn_star_display">
+                    <div id="rn_star_text_div">
+                        <span id="rn_star_text">stars</span>
+                    </div>
+                    <div id="rn_star_deck"></div>
+                </div>
+                <div id="rn_star_discard_display">
+                    <div id="rn_star_discard"></div>
+                </div>
+                <div id="rn_megastar_display">
+                    <div id="rn_megastar_deck"></div>
+                </div>
             </div>
-            <div id="rn_ad_display">
-                <div id="rn_ad_deck"></div>
+            <div id="rn_ad_row">
+                <div id="rn_ad_display">
+                    <div id="rn_ad_text_div">
+                        <span id="rn_ad_text">ads</span>
+                    </div>
+                    <div id="rn_ad_deck"></div>
+                </div>
+                <div id="rn_ad_discard_display">
+                    <div id="rn_ad_discard"></div>
+                </div>
             </div>
         </div>
-        <div id="rn_megastar_deck"></div>
-        <div id="rn_network_display">
-            <div id="rn_network_deck"></div>
-        </div>
+        
     </div>
 </div>
 
