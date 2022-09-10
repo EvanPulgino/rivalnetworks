@@ -40,6 +40,14 @@ class view_rivalnetworks_rivalnetworks extends game_view
     // Get players
     $players = $this->game->loadPlayersBasicInfos();
 
+    // Populate variables
+    $this->tpl['ADS'] = self::_("Ads");
+    $this->tpl['GREEN_ROOM'] = self::_("Green Room");
+    $this->tpl['NETWORK'] = self::_("Network");
+    $this->tpl['RERUNS'] = self::_("Reruns");
+    $this->tpl['SHOWS'] = self::_("Shows");
+    $this->tpl['STARS'] = self::_("Stars");
+
     // Inflate playerareas
     $this->page->begin_block($template, 'playerarea');
     foreach($players as $player) {

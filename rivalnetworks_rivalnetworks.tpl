@@ -13,6 +13,9 @@
 <div id="rn_layout">
     <!-- BEGIN playerarea -->
     <div id="rn_playerarea_{PLAYER_ID}" class="rn-playerarea rn-playerarea-{COLOR}" style="order:{ORDER};">
+        <div id="rn_player_area_text_div_{PLAYER_ID}" class="rn-player-area-text-div">
+            <span id="rn_player_area_text_{PLAYER_ID}" class="rn-player-area-text">{GREEN_ROOM} + {RERUNS}</span>
+        </div>
         <div id="rn_house_{PLAYER_ID}" class="rn-house rn-house-{COLOR}"></div>
         <div id="rn_active_turn_viewers_{PLAYER_ID}" class="rn-active-turn-viewers rn-hidden"></div>
         <div id="rn_greenroom_stars_{PLAYER_ID}" class="rn-greenroom rn-hidden"></div>
@@ -46,7 +49,7 @@
             <div id="rn_show_row">
                 <div id="rn_show_display">
                     <div id="rn_show_text_div">
-                        <span id="rn_show_text">shows</span>
+                        <span id="rn_show_text">{SHOWS}</span>
                     </div>
                     <div id="rn_show_deck"></div>
                 </div>
@@ -56,8 +59,8 @@
             </div>
             <div id="rn_network_row">
                 <div id="rn_network_display">
-                    <div id="rn_star_text_div">
-                        <span id="rn_star_text">network</span>
+                    <div id="rn_network_text_div">
+                        <span id="rn_network_text">{NETWORK}</span>
                     </div>
                     <div id="rn_network_deck"></div>
                 </div>
@@ -71,7 +74,7 @@
             <div id="rn_star_row">
                 <div id="rn_star_display">
                     <div id="rn_star_text_div">
-                        <span id="rn_star_text">stars</span>
+                        <span id="rn_star_text">{STARS}</span>
                     </div>
                     <div id="rn_star_deck"></div>
                 </div>
@@ -85,7 +88,7 @@
             <div id="rn_ad_row">
                 <div id="rn_ad_display">
                     <div id="rn_ad_text_div">
-                        <span id="rn_ad_text">ads</span>
+                        <span id="rn_ad_text">{ADS}</span>
                     </div>
                     <div id="rn_ad_deck"></div>
                 </div>

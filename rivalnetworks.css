@@ -93,6 +93,22 @@ html {
     background-image: linear-gradient(to right, rgba(255, 165, 0, 1), rgba(255, 165, 0, 0));
 }
 
+.rn-player-area-text-div {
+    position: absolute;
+    display: grid;
+    min-width: 95%;
+    place-content: end;
+    z-index: -1;
+}
+
+.rn-player-area-text {
+    font-size: 7rem;
+    font-weight: 800;
+    color: cornsilk;
+    text-transform: uppercase;
+    margin-right: 1rem;
+}
+
 .rn-active-turn-viewers {
     --gap: -4.5rem;
     position: relative;
@@ -204,7 +220,7 @@ html {
 .rn-show-rating {
     font-size: 4rem;
     font-weight: 800;
-    text-shadow: 0.1rem 0.1rem 0.1rem black;
+    text-shadow: 0.1rem 0.1rem 0.1rem cornsilk;
 }
 .rn-show-rating-blue {
     color: #029eda;
@@ -248,7 +264,7 @@ html {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: flex-end;
     gap: 5px;
     order: 1;
 }
@@ -293,7 +309,7 @@ html {
     font-weight: 800;
     color: cornsilk;
     text-transform: uppercase;
-    margin-right: 3rem;
+    margin-right: 1rem;
 }
 
 #rn_show_deck {
@@ -367,6 +383,22 @@ html {
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px #000000a0;
     order: 1;
+}
+
+#rn_network_text_div {
+    position: absolute;
+    display: grid;
+    min-width: 650px;
+    place-content: end;
+    z-index: -1;
+}
+
+#rn_network_text {
+    font-size: 7rem;
+    font-weight: 800;
+    color: cornsilk;
+    text-transform: uppercase;
+    margin-right: 1rem;
 }
 
 #rn_network_deck {
@@ -464,7 +496,7 @@ html {
     font-weight: 800;
     color: cornsilk;
     text-transform: uppercase;
-    margin-right: 3rem;
+    margin-right: 1rem;
 }
 
 #rn_star_deck {
@@ -584,7 +616,7 @@ html {
     font-weight: 800;
     color: cornsilk;
     text-transform: uppercase;
-    margin-right: 3rem;
+    margin-right: 1rem;
 }
 
 #rn_ad_deck {
