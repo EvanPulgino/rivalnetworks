@@ -106,7 +106,7 @@
 var jstpl_ratings_disc = '<div id="rn_ratings_disc_${time}pm_${player_id}" class="rn-ratings-disc rn-ratings-disc-${color}"><span id="rn_ratings_disc_${time}pm_${player_id}" class="rn-ratings-disc-20 ${visibility}">+20</span></div>';
 var jstpl_show = '<div id="rn_show_${show_id}" class="rn-show ${show_class}" season="${show_season}" genre="${show_genre}" preftimeslot="${show_preftimeslot}" correctrating="${show_correctrating}" wrongrating="${show_wrongrating}"></div>';
 var jstpl_star = '<div id="rn_star_${star_id}" class="rn-star ${star_class}" genres="${star_genres}" rating="${star_rating}"></div>';
-var jstpl_viewer_chip = '<div id="rn_viewer_chip_${num} class="rn-viewer-chip"></div>'
+var jstpl_viewer_chip = '<div id="rn_viewer_chip_${num}" class="rn-viewer-chip"></div>'
 
 </script>  
 

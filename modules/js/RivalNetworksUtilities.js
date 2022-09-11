@@ -48,6 +48,15 @@ define([
         { 
             return '/' + this.game.game_name + '/' + this.game.game_name + '/' + actionName + '.html';
         },
+
+        /**
+         * Hide an HTML element
+         * @param {string} elementDiv HTML element to hide
+         */
+        hideElement: function (elementDiv)
+        { 
+            dojo.addClass(elementDiv, HIDDEN);
+        },
  
         /**
          * Create an html block from a jstpl template and place in parent div
@@ -73,6 +82,22 @@ define([
             dojo.query('.dgit-highlight').removeClass('dgit-highlight');
         },
 
+        /**
+         * Show a hidden HTML element
+         * @param {string} elementDiv HTML element to show
+         */
+        showElement: function (elementDiv)
+        { 
+            dojo.removeClass(elementDiv, HIDDEN);
+        },
+
+        /**
+         * Sort an array of objects by the value of a specified property
+         * @param {Object[]} objects Array of objects to sort
+         * @param {string} property Name of property to sort by
+         * @param {boolean} asc Sort in ascending order if true, descending if false 
+         * @returns 
+         */
         sortObjectArrayByProperty: function (objects, property, asc = true)
         {
             if (asc) {

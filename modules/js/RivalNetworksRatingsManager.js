@@ -42,6 +42,14 @@ define([
                     // Create ratings discs for time slots
                     this.createRatingsDisc(player, time);
                 }
+                // Create viewer chips
+                if (player.activeTurnViewers > 0) {
+                    const parentDiv = 'rn_active_turn_viewers_' + player.id;
+                    this.game.utilities.showElement(parentDiv);
+                    for (let chipNum = 1; chipNum <= player.activeTurnViewers; chipNum++) {
+                        this.createViewerChip(chipNum, parentDiv);
+                    }
+                }
             }
         },
 
@@ -74,6 +82,15 @@ define([
                     player_id: player.id,
                     color: player.color == '029eda' ? 'blue' : 'yellow',
                     visibility: plusTwenty ? ''  : 'rn-hidden',
+                }
+            );
+        },
+
+        createViewerChip: function (chipNum, parentDiv)
+        { 
+            this.game.utilities.placeBlock(VIEWER_CHIP_TEMPLATE, parentDiv,
+                {
+                    num: chipNum
                 }
             );
         },

@@ -32,6 +32,11 @@ define('GREENROOM', 'greenroom');
 define('MEGASTARS', 'megastars');
 
 /**
+ * CSS Class
+ */
+define('HIDDEN', 'rn-hidden');
+
+/**
  * Genres
  */
 define('ACTION', 'action');
